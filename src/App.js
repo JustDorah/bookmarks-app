@@ -89,7 +89,7 @@ class App extends Component {
             />
           )} */}
           <Route
-            path="add-bookmark"
+            path="/add-bookmark"
             render={() => (
               <AddBookmark
                 onAddBookmark={this.addBookmark}
