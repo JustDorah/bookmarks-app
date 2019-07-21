@@ -99,7 +99,7 @@ class App extends Component {
             //   />
             // )}
             render={({ history }) => {
-              // console.log(history);
+              console.log(history);
               return (
                 <AddBookmark
                   onAddBookmark={this.addBookmark}
