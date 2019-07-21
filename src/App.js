@@ -90,14 +90,23 @@ class App extends Component {
           )} */}
           <Route
             path="/add-bookmark"
-            render={() => (
-              <AddBookmark
-                onAddBookmark={this.addBookmark}
-                onClickCancel={() => {
-                  /*What here? */
-                }}
-              />
-            )}
+            // render={() => (
+            //   <AddBookmark
+            //     onAddBookmark={this.addBookmark}
+            //     onClickCancel={() => {
+            //       /*What here? */
+            //     }}
+            //   />
+            // )}
+            render={({ history }) => {
+              // console.log(history);
+              return (
+                <AddBookmark
+                  onAddBookmark={this.addBookmark}
+                  onClickCancel={() => history.push("/")}
+                />
+              );
+            }}
           />
           {/* {page === "list" && <BookmarkList bookmarks={bookmarks} />} */}
           <Route
