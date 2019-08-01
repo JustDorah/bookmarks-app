@@ -7,30 +7,6 @@ import Nav from "./Nav/Nav";
 import config from "./config";
 import "./App.css";
 
-const bookmarks = [
-  // {
-  //   id: 0,
-  //   title: 'Google',
-  //   url: 'http://www.google.com',
-  //   rating: '3',
-  //   desc: 'Internet-related services and products.'
-  // },
-  // {
-  //   id: 1,
-  //   title: 'Thinkful',
-  //   url: 'http://www.thinkful.com',
-  //   rating: '5',
-  //   desc: '1-on-1 learning to accelerate your way to a new high-growth tech career!'
-  // },
-  // {
-  //   id: 2,
-  //   title: 'Github',
-  //   url: 'http://www.github.com',
-  //   rating: '4',
-  //   desc: 'brings together the world\'s largest community of developers.'
-  // }
-];
-
 class App extends Component {
   state = {
     //bookmarks,
@@ -48,6 +24,17 @@ class App extends Component {
   addBookmark = bookmark => {
     this.setState({
       bookmarks: [...this.state.bookmarks, bookmark]
+    });
+  };
+
+  //removes bookmark from state
+  deleteBookmark = bookmarkId => {
+    console.log("bookmarkId: ", bookmarkId);
+    const newBookmarks = this.state.bookmarks.filter(
+      bm => bm.id !== bookmarkId
+    );
+    this.setState({
+      bookmarks: newBookmarks
     });
   };
 
@@ -72,11 +59,12 @@ class App extends Component {
   render() {
     /*const { bookmarks } = this.state;
     -- adding contextValue here and <BookmarkContext.Provider .../> the list of bookmarks isn't showing, nothing even with component created for routing.
--- a warning to be aware of: Warning: You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored
+    -- a warning to be aware of: Warning: You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored
     */
     const contextValue = {
       bookmarks: this.state.bookmarks,
-      addBookmark: this.addBookmark
+      addBookmark: this.addBookmark,
+      deleteBookmark: this.deleteBookmark
     };
 
     return (

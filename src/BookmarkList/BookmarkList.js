@@ -3,11 +3,13 @@ import BookmarksContext from "../BookmarksContext";
 import BookmarkItem from "../BookmarkItem/BookmarkItem";
 import "./BookmarkList.css";
 
+//Take NOTE: Only the bookmarks I have created can be deleted. The dummy bookmarks can not be deleted.
 class BookmarkList extends Component {
-  static contextType = BookmarksContext;
-  /*static defaultProps = {
+  static defaultProps = {
     bookmarks: []
-  };*/
+  };
+
+  static contextType = BookmarksContext;
 
   render() {
     //const { bookmarks } = this.props;
