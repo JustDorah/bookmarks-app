@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import AddBookmark from "./AddBookmark/AddBookmark";
 import BookmarkList from "./BookmarkList/BookmarkList";
 import Nav from "./Nav/Nav";
+import Rating from "./Rating/Rating";
 import config from "./config";
 import "./App.css";
 
@@ -95,6 +96,14 @@ class App extends Component {
             />
           </div>
         </BookmarkContext.Provider>
+        {/* 
+        has an error
+        <Rating value="hello" /> */}
+        {/* 
+        warning error disappears
+        <Rating value={5} /> */}
+        {/* no warning cz we didn't specify that this prop is required */}
+        <Rating />
       </main>
     );
   }

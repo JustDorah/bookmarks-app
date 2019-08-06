@@ -13,7 +13,9 @@ class BookmarkList extends Component {
 
   render() {
     //const { bookmarks } = this.props;
-    const { bookmarks } = this.context; //with this addition bookmark list showing again
+    const { bookmarks } = this.context;
+    console.log(this.context.bookmarks, "bookmarklist bookmakr");
+    //with this addition bookmark list showing again
     return (
       <section className="BookmarkList">
         <h2>Your bookmarks</h2>
