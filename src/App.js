@@ -100,10 +100,12 @@ class App extends Component {
         has an error
         <Rating value="hello" /> */}
         {/* 
-        warning error disappears
-        <Rating value={5} /> */}
+        warning error disappears*/}
+        <Rating value={5} />
         {/* no warning cz we didn't specify that this prop is required */}
-        <Rating />
+        {/* <BookmarkList bookmarks={[1, 2, 3, 4, 5]} /> */}
+        {/* <BookmarkList bookmarks={[{ a: 2, b: 4 }, { a: 9, b: 12 }]} /> */}
+        {/* <Rating /> */}
       </main>
     );
   }
