@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "https://dorah-bookmarks-app.now.sh",
   "name": "bookmarks-app",
   "routes": [
     {
